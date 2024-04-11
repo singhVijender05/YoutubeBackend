@@ -20,9 +20,13 @@ app.on('error', (err) => {
 
 
 //routes import
-import userRouter from './routes/user.routes.js'
+import router  from './routes/user.routes.js'
 
 //routes declaration
-app.use("/users",userRouter)
+app.use("/users",router)
+// app.post('/upload', upload.single('avatar'), (req, res) => {
+//     console.log('Received file:', req.file);
+//     res.send('File uploaded successfully');
+//   })
 
 export default app;
